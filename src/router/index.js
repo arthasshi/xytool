@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -17,6 +17,16 @@ Vue.use(VueRouter)
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/map',
+    name: 'Map',
+    component: () => import(/* webpackChunkName: "map" */ '../views/MapTotal.vue')
+  },
+  {
+    path: '/circle',
+    name: 'circle',
+    component: () => import(/* webpackChunkName: "circle" */ '../views/CircleTotal.vue')
   }
 ]
 
